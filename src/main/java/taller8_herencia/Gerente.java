@@ -7,14 +7,14 @@ package taller8_herencia;
 public class Gerente extends Empleado {
     private String departamento;
 
-    public Gerente(String nombre, int edad, double salario, String departamento) {
-        super(nombre, edad, salario);
+    public Gerente(String nombre, double salario, String departamento) {
+        super(nombre, salario);
         this.departamento = departamento;
     }
 
     @Override
     public void mostrarDetalles() {
-        super.mostrarDetalles(); // Muestra los detalles del empleado
-        System.out.println("Departamento: " + this.departamento);
+        super.mostrarDetalles(); // Llama al método de Empleado para reutilizar nombre y salario
+        System.out.println("Departamento: " + departamento);
     }
 }

@@ -4,20 +4,16 @@
  */
 package taller8_herencia;
 
-/**
- * Clase base que representa a un empleado con nombre y salario.
- */
-public class Empleado extends Persona { // Reutilizamos Persona para este ejemplo
+public class Empleado {
+    protected String nombre;
     protected double salario;
 
-    public Empleado(String nombre, int edad, double salario) {
-        super(nombre, edad);
+    public Empleado(String nombre, double salario) {
+        this.nombre = nombre;
         this.salario = salario;
     }
 
-    @Override
     public void mostrarDetalles() {
-        super.mostrarDetalles();
-        System.out.println("Salario: $" + this.salario);
+        System.out.println("Nombre: " + nombre + ", Salario: " + salario);
     }
 }
